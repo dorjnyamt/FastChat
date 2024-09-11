@@ -99,7 +99,7 @@ def display_single_answer(question_selector, model_selector1, request: gr.Reques
     )
 
     judgment_dict_turn2 = resolve_single_judgment_dict(
-        q, model_judgments_normal_single, model_judgments_math_single, multi_turn=True
+        q, model_judgments_normal_single, model_judgments_math_single, multi_turn=False
     )
 
     explanation_turn2 = (
