@@ -85,6 +85,7 @@ OPENAI_MODEL_LIST = (
     "im-also-a-good-gpt2-chatbot",
     "im-a-good-gpt2-chatbot",
     "gpt-4o-2024-05-13",
+    "gpt-4o"
 )
 
 
