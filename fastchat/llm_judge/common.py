@@ -617,13 +617,13 @@ def resolve_pairwise_judgment_dict(
     """Return the correct pairwise judge."""
     if multi_turn:
         if question["category"] in NEED_REF_CATS:
-            return model_judgments_math[("gpt-4", "pair-math-v1-multi-turn")]
-        return model_judgments_normal[("gpt-4", "pair-v2-multi-turn")]
+            return model_judgments_math[("gpt-4o", "pair-math-v1-multi-turn")]
+        return model_judgments_normal[("gpt-4o", "pair-v2-multi-turn")]
 
     if question["category"] in NEED_REF_CATS:
-        return model_judgments_math[("gpt-4", "pair-math-v1")]
+        return model_judgments_math[("gpt-4o", "pair-math-v1")]
     else:
-        return model_judgments_normal[("gpt-4", "pair-v2")]
+        return model_judgments_normal[("gpt-4o", "pair-v2")]
 
 
 def resolve_single_judgment_dict(
@@ -632,13 +632,13 @@ def resolve_single_judgment_dict(
     """Return the correct single answer grading judge."""
     if multi_turn:
         if question["category"] in NEED_REF_CATS:
-            return model_judgments_math[("gpt-4", "single-math-v1-multi-turn")]
-        return model_judgments_normal[("gpt-4", "single-v1-multi-turn")]
+            return model_judgments_math[("gpt-4o", "single-math-v1-multi-turn")]
+        return model_judgments_normal[("gpt-4o", "single-v1-multi-turn")]
 
     if question["category"] in NEED_REF_CATS:
-        return model_judgments_math[("gpt-4", "single-math-v1")]
+        return model_judgments_math[("gpt-4o", "single-math-v1")]
     else:
-        return model_judgments_normal[("gpt-4", "single-v1")]
+        return model_judgments_normal[("gpt-4o", "single-v1")]
 
 
 def get_pairwise_judge_explanation(gamekey, judgment_dict):

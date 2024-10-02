@@ -353,7 +353,7 @@ block_css = """
 
 
 def load_demo():
-    dropdown_update = gr.Dropdown.update(value=list(category_selector_map.keys())[0])
+    dropdown_update = gr.Dropdown(value=list(category_selector_map.keys())[0])
     return dropdown_update, dropdown_update
 
 
@@ -392,10 +392,10 @@ if __name__ == "__main__":
     question_file = f"data/{args.bench_name}/question.jsonl"
     answer_dir = f"data/{args.bench_name}/model_answer"
     pairwise_model_judgment_file = (
-        f"data/{args.bench_name}/model_judgment/gpt-4_pair.jsonl"
+        f"data/{args.bench_name}/model_judgment/gpt-4o_pair.jsonl"
     )
     single_model_judgment_file = (
-        f"data/{args.bench_name}/model_judgment/gpt-4_single.jsonl"
+        f"data/{args.bench_name}/model_judgment/gpt-4o_single.jsonl"
     )
 
     # Load questions
